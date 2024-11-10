@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beranda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="about.html" class="nav-link">Tentang Kami</a>
+        <a href="contact.html" class="nav-link">Kontak</a>
+    </nav>
+<button id="themeToggle" class="theme-toggle">☀️</button>
+    <div class="main-content page-transition">
+        <h1>Selamat Datang di Beranda Kami</h1>
+        <p>Temukan informasi terbaru dan layanan terbaik kami di halaman ini.</p>
+    </div>
+    <div id="encodedContent" style="display: none;">
+    PGRpdiBjbGFzcz0iY29udGVudCI++Cg==
+</div>
+
+<div id="decodedContent"></div>
+
+<script>
+    // Ambil konten dari elemen yang di-encode
+    const encoded = document.getElementById("encodedContent").textContent;
+
+    // Decode base64 dan masukkan ke dalam halaman
+    const decoded = atob(encoded);
+    document.getElementById("decodedContent").innerHTML = decoded;
+</script>
+    <audio autoplay loop>
+    <source src="https://files.catbox.moe/56unrm.mp3" type="audio/mp3">
+    Browser Anda tidak mendukung elemen audio.
+</audio>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+/* Gaya umum */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.light-theme {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+/* Spinner loading */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: none; /* Sembunyikan secara default */
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Keyframes untuk animasi spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Posisi relatif untuk form button */
+.form-container {
+    position: relative;
+}
+
+button {
+    position: relative;
+    padding-right: 40px; /* Berikan ruang untuk spinner */
+}
+
+/* Gaya khusus untuk mode gelap */
+body.dark-theme input[type="text"],
+body.dark-theme input[type="email"],
+body.dark-theme textarea {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+/* Tombol Tema */
+.theme-toggle {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s, box-shadow 0.3s;
+}
+
+.theme-toggle:hover {
+    color: #4CAF50;
+}
+
+/* Tombol glow */
+button.glow {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: box-shadow 0.3s ease-in-out;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button.glow:hover {
+    background-color: #45a049;
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.8), 0 0 25px rgba(76, 175, 80, 0.6);
+}
+
+/* Spinner */
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #4CAF50;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Efek Glowing pada Teks */
+.glow-text {
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #4CAF50;
+    text-shadow: 0 0 8px rgba(76, 175, 80, 0.6), 0 0 15px rgba(76, 175, 80, 0.5);
+}
+
+/* Marquee Developer */
+.developer-marquee {
+    margin-top: 20px;
+    text-align: center;
+}
+
+/* Efek transisi 3D */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%) rotateY(-60deg);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0) rotateY(0deg);
+        opacity: 1;
+    }
+}
+
+.page-transition {
+    animation: slideIn 0.6s ease forwards;
+}
+
+/* Posisi konten utama */
+.main-content {
+    perspective: 1000px; /* Menambah efek 3D */
+}
